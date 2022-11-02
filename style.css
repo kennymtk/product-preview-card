@@ -91,7 +91,8 @@ button.cta{
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
-    transition: background-color .3s ease;
+    transition: background-color, 200ms, ease;
+    width: 100%;
 }
 
 button.cta :hover{
@@ -100,5 +101,51 @@ button.cta :hover{
 
 button.cta img{
     padding-right: 7px;
+}
+
+@media only screen and (max-width: 628px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .img img{
+        max-height: 450px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .card-content{
+        display: block;
+    }
+    h6.pro-cat, h2.pro-name, p.pro-des, .price{
+        padding-bottom: 23px;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .container{
+        margin: 15px auto;
+        padding: 0 15px;
+    }
+    .img img{
+        max-height: 290px;
+    }
+    .card-content{
+        padding: 24px;
+    }
+    h6.pro-cat, h2.pro-name, p.pro-des, .price{
+        padding-bottom: 16px;
+    }
+    h2.pro-name{
+        font-size: 28px;
+    }
+    p.pro-des{
+        font-size: 12px;
+    }
+    p.current-price{
+        font-size: 23px;
+    }
+    button.cta{
+        padding: 12px 0;
+        font-size: 13px;
+    }
 }
 
